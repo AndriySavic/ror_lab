@@ -1,0 +1,5 @@
+<%=link_to "Home",root_path%>
+<h1>Hellow my friend <%@user.firstname%></h1>
+<br/>
+<%=link_to "Exit",user_path(@user.id), method: :delete %>
+

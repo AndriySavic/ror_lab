@@ -1,0 +1,54 @@
+<%= form_for :user, url: users_path do |f| %>
+
+<% if @user.errors.any? %>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+<% end %>
+
+<p><%=f.label " Firstname" %></p>
+<%= f.text_field :firstname%><br />
+
+<p><%=f.label " Lastname" %></p>
+<%= f.text_field :lastname%><br />
+
+<p><%=f.label " Street" %></p>
+<%= f.select :gender ,['male','female']%><br />
+
+<p><%=f.label " Age" %></p>
+<%= f.text_field :age%><br />
+
+
+<p><%=f.label " Phone" %></p>
+<%= f.text_field :phone%><br />
+
+
+<p><%=f.label " Email" %></p>
+<%= f.text_field :email%><br />
+
+
+<p><%=f.label " Password" %></p>
+<%= f.password_field :password%><br />
+
+
+<p><%=f.label " Country" %></p>
+<%= f.text_field :country%><br />
+
+
+<p><%=f.label " City" %></p>
+<%= f.text_field :city%><br />
+
+
+<p><%=f.label " Street" %></p>
+<%= f.text_field :street%><br />
+
+<p><%=f.label " APT" %></p>
+<%= f.text_field :apt%><br />
+
+<p><%=f.label " Link" %></p>
+<%= f.text_field :link%><br />
+
+
+<p><%= f.submit "Save"%></p>
+
+<% end %>
