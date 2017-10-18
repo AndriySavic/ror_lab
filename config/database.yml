@@ -20,6 +20,14 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#production:
+#  <<: *default
+#  database: db/production.sqlite3
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: postgresql-acute-89552_production
+  username: postgresql-acute-89552
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+
+
