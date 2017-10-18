@@ -1,5 +1,6 @@
 <%=link_to "Home",root_path%>
 <h1>Hellow my friend <%@user.firstname%></h1>
 <br/>
+Профіль :<%@user.firstname%> <%@user.secondname%> (<%@user.age%>)
 <%=link_to "Exit",user_path(@user.id), method: :delete %>
 
